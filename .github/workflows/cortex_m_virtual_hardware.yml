@@ -9,9 +9,12 @@ jobs:
   cortex_m_generic:
     runs-on: ubuntu-latest
       
-    name: Corstone-300 
+    name: Cortex-M7
     steps:
       - uses: actions/checkout@v2    
+      - name: Prepare test suite
+        run: 
+          cp . /vht
       - name: Execute test suite on Virtual Hardware at AWS
         uses: Arm-Software/VHT-AMI@v2
         with:
