@@ -1,0 +1,21 @@
+suite:
+  name: "tensorflow-kernel-tests-reference"
+  model: "VHT-Cortex-M7"
+  configuration: ""
+  working_dir: "/home/ubuntu/vhtwork"
+  pre: ""
+  post: ""
+
+  builds:
+   - "aws mqtt example":
+      shell: "cbuild.sh ./AWS_MQTT_MutualAuth.VHT_MPS2_Cortex-M7.cprj"
+      post: "" 
+      
+
+  tests:
+   - "aws mqtt example":
+      executable: "./Objects/image.axf"
+      arguments: "-V ../VSI/audio/python -f ./fvp_config.txt --stat --cyclelimit 768000000"
+      pre: ""
+      post: ""
+      timeout: 20
