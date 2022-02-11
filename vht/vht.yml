@@ -15,7 +15,7 @@ suite:
   tests:
    - "aws mqtt example":
       executable: "./Objects/image.axf"
-      arguments: "-V ../VSI/audio/python -f ./fvp_config.txt --stat --cyclelimit 768000000"
+      arguments: "-V ../VSI/audio/python --stat --cyclelimit 10000000000"
       pre: ""
       post: ""
       timeout: 20
