@@ -1,6 +1,6 @@
 suite:
   name: "tensorflow-kernel-tests-reference"
-  model: "VHT-Cortex-M7"
+  model: "VHT_MPS2_Cortex-M7"
   configuration: ""
   working_dir: "/home/ubuntu/vhtwork"
   pre: ""
