@@ -9,12 +9,12 @@ jobs:
   cortex_m_generic:
     runs-on: ubuntu-latest
       
-    name: Cortex-M7
+    name: Cortex-M7 Virtual Hardware Target
     steps:
       - uses: actions/checkout@v2    
       - name: Prepare test suite
         run: 
-          cp . /vht
+          cp -r . /vht
       - name: Execute test suite on Virtual Hardware at AWS
         uses: Arm-Software/VHT-AMI@v2
         with:
